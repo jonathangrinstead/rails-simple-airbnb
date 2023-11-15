@@ -1,0 +1,18 @@
+<br>
+<h2>Simple Airbnb</h2>
+
+
+<div class="row justify-content-between">
+  <% @flats.each do |flat| %>
+    <div class="card p-2 mb-3 m-1 col-3">
+      <img src="https://mygate.com/wp-content/uploads/2023/07/110.jpg" class="card-img-top rounded" alt="Nice House">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text"><% flat.address %>
+            <%=  flat.description %>
+            <%= flat.price_per_night %>
+            <%= flat.number_of_guests %></p>
+        </div>
+    </div>
+  <% end %>
+</div>
